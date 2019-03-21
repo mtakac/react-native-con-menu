@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AnimatedView /> mounts correctly 1`] = `
+<AnimatedView
+  duration={500}
+  isMounted={true}
+  style={null}
+/>
+`;
+
+exports[`<AnimatedView /> renders correctly 1`] = `""`;

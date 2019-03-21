@@ -1,0 +1,188 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConMenu /> renders <ToggleComponent /> correctly 1`] = `
+<Component
+  style={
+    Object {
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Component
+    onLayout={[Function]}
+  >
+    <ToggleComponent
+      onPress={[Function]}
+    />
+  </Component>
+  <Component
+    animationType="none"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPressOut={[Function]}
+    >
+      <_class2
+        duration={250}
+        isMounted={false}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "left": undefined,
+              "position": "absolute",
+              "top": 0,
+              "width": 200,
+            }
+          }
+        />
+      </_class2>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`<ConMenu /> renders correctly 1`] = `
+<Component
+  style={
+    Object {
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Component
+    onLayout={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="Menu"
+    />
+  </Component>
+  <Component
+    animationType="none"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPressOut={[Function]}
+    >
+      <_class2
+        duration={250}
+        isMounted={false}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "left": undefined,
+              "position": "absolute",
+              "top": 0,
+              "width": 200,
+            }
+          }
+        />
+      </_class2>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;
+
+exports[`<ConMenu /> renders items correctly 1`] = `
+<Component
+  style={
+    Object {
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+    }
+  }
+>
+  <Component
+    onLayout={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="Menu"
+    />
+  </Component>
+  <Component
+    animationType="none"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPressOut={[Function]}
+    >
+      <_class2
+        duration={250}
+        isMounted={false}
+        style={
+          Object {
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <Component
+          style={
+            Object {
+              "left": undefined,
+              "position": "absolute",
+              "top": 0,
+              "width": 200,
+            }
+          }
+        >
+          <DummyTouchableNativeFeedback
+            background={Object {}}
+            key="Menu item"
+            onPress={[Function]}
+          >
+            <Component
+              style={
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "#EEEEEE",
+                  "flex": 1,
+                  "justifyContent": "center",
+                  "padding": 20,
+                }
+              }
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+              >
+                Menu item
+              </Text>
+            </Component>
+          </DummyTouchableNativeFeedback>
+        </Component>
+      </_class2>
+    </TouchableOpacity>
+  </Component>
+</Component>
+`;

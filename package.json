@@ -1,0 +1,112 @@
+{
+    "name": "react-native-con-menu",
+    "version": "0.1.0",
+    "description": "Dropdown context menu for React Native apps",
+    "main": "src/index.js",
+    "keywords": [
+        "react-native",
+        "reactjs",
+        "reactnative",
+        "menu",
+        "context",
+        "popup",
+        "dropdown"
+    ],
+    "scripts": {
+        "build": "rm -rf build; webpack",
+        "test": "jest",
+        "test:update": "jest -u",
+        "test:ci": "jest --runInBand",
+        "test:watch": "jest --watch",
+        "lint": "eslint src",
+        "clean-install": "rm -rf node_modules && npm build"
+    },
+    "author": "Marek TAkac",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com"
+    },
+    "homepage": "https://github.com",
+    "devDependencies": {
+        "babel": "^6.23.0",
+        "babel-core": "^6.23.1",
+        "babel-eslint": "^10.0.1",
+        "babel-jest": "22.4.3",
+        "babel-loader": "^6.3.2",
+        "babel-preset-react-native": "4.0.0",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.6.0",
+        "enzyme-to-json": "^3.3.5",
+        "eslint": "^5.10.0",
+        "eslint-config-airbnb": "^17.1.0",
+        "eslint-config-prettier": "^3.3.0",
+        "eslint-plugin-import": "^2.14.0",
+        "eslint-plugin-jest": "^22.1.2",
+        "eslint-plugin-jsx-a11y": "^6.1.2",
+        "eslint-plugin-react": "^7.11.1",
+        "eslint-plugin-react-native": "^3.5.0",
+        "file-loader": "^0.11.1",
+        "husky": "^1.1.2",
+        "jest": "23.5.0",
+        "jest-transform-stub": "^1.0.0",
+        "prop-types": "^15.5.8",
+        "react": "16.3.1",
+        "react-addons-test-utils": "^15.6.2",
+        "react-dom": "16.3.3",
+        "react-native": "0.55.4",
+        "react-test-renderer": "^16.6.0",
+        "webpack": "^2.2.1"
+    },
+    "peerDependencies": {
+        "react-native": "^0.57"
+    },
+    "jest": {
+        "preset": "react-native",
+        "snapshotSerializers": [
+            "enzyme-to-json/serializer"
+        ],
+        "coverageDirectory": "./coverage/",
+        "modulePathIgnorePatterns": [
+            "<rootDir>/examples/"
+        ],
+        "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!src/index.js",
+            "!src/helpers/*.js"
+        ],
+        "collectCoverage": true,
+        "globals": {
+            "__DEV__": true
+        },
+        "transform": {
+            ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+        }
+    },
+    "lint-staged": {
+        "src/**/*.js": [
+            "eslint --fix src",
+            "git add",
+            "jest --bail --findRelatedTests"
+        ],
+        "**/*.md": [
+            "prettier --single-quote --trailing-comma=es5 --write"
+        ]
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "files": [
+        "README.md",
+        "package.json",
+        "LICENSE",
+        ".gitignore",
+        "src"
+    ]
+}
