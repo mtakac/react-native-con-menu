@@ -1,6 +1,6 @@
 {
     "name": "react-native-con-menu",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Dropdown context menu for React Native apps",
     "main": "src/index.js",
     "keywords": [
