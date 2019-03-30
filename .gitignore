@@ -11,15 +11,15 @@ website/build
 package-lock.json
 build
 
-examples/node_modules
-examples/.DS_Store
-examples/*.log
-examples/site
-examples/coverage
-examples/jsconfig.json
-examples/.vscode/
-examples/.idea/
-examples/website/build
-examples/.idea/
-examples/package-lock.json
-examples/build
+demo/node_modules
+demo/.DS_Store
+demo/*.log
+demo/site
+demo/coverage
+demo/jsconfig.json
+demo/.vscode/
+demo/.idea/
+demo/website/build
+demo/.idea/
+demo/package-lock.json
+demo/build

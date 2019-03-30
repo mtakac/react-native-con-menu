@@ -15,11 +15,7 @@
     "scripts": {
         "build": "rm -rf build; webpack",
         "test": "jest",
-        "test:update": "jest -u",
-        "test:ci": "jest --runInBand",
-        "test:watch": "jest --watch",
-        "lint": "eslint src",
-        "clean-install": "rm -rf node_modules && npm build"
+        "lint": "eslint src"
     },
     "author": "Marek TAkac",
     "license": "MIT",
@@ -67,7 +63,7 @@
         ],
         "coverageDirectory": "./coverage/",
         "modulePathIgnorePatterns": [
-            "<rootDir>/examples/"
+            "<rootDir>/demo/"
         ],
         "setupTestFrameworkScriptFile": "<rootDir>/testSetup.js",
         "collectCoverageFrom": [
