@@ -29,7 +29,10 @@ const propTypes = {
 
     animationDuration: PropTypes.number,
     itemPressedColor: PropTypes.string,
-    position: PropTypes.shape({ top: PropTypes.number, left: PropTypes.number }),
+    position: PropTypes.shape({
+        top: PropTypes.number,
+        left: PropTypes.number
+    }),
     menuStyle: PropTypes.shape({ width: PropTypes.number.isRequired }),
     itemStyle: PropTypes.oneOfType([PropTypes.number, PropTypes.object]),
     toggleText: PropTypes.string,
@@ -85,7 +88,10 @@ class ConMenu extends Component {
         const { menuStyle } = this.props;
 
         this.buttonView.current.measure((x, y, width, height, pageX, pageY) => {
-            this.setState({ top: pageY + height, left: pageX - menuStyle.width + width });
+            this.setState({
+                top: pageY + height,
+                left: pageX - menuStyle.width + width
+            });
         });
     };
 
@@ -97,6 +103,11 @@ class ConMenu extends Component {
         }
 
         return <Button title={toggleText} onPress={this.toggle} />;
+    };
+
+    handlePress = onPress => {
+        this.toggle();
+        onPress();
     };
 
     render() {
@@ -118,22 +129,39 @@ class ConMenu extends Component {
                 </View>
 
                 <Modal visible={isModalOpen} animationType="none" transparent>
-                    <TouchableOpacity activeOpacity={1} onPressOut={this.toggle}>
+                    <TouchableOpacity
+                        activeOpacity={1}
+                        onPressOut={this.toggle}
+                    >
                         <AnimatedView
                             style={styles.animatedView}
                             duration={animationDuration}
                             isMounted={isMounted}
                         >
-                            <View style={{ ...menuStyle, ...styles.menu, top, left }}>
+                            <View
+                                style={{
+                                    ...menuStyle,
+                                    ...styles.menu,
+                                    top,
+                                    left
+                                }}
+                            >
                                 {items.map(({ label, onPress }) => (
                                     <TouchableNativeFeedback
                                         key={label}
                                         background={TouchableNativeFeedback.Ripple(
                                             itemPressedColor
                                         )}
-                                        onPress={onPress}
+                                        onPress={() =>
+                                            this.handlePress(onPress)
+                                        }
                                     >
-                                        <View style={{ ...styles.item, ...itemStyle }}>
+                                        <View
+                                            style={{
+                                                ...styles.item,
+                                                ...itemStyle
+                                            }}
+                                        >
                                             <Text>{label}</Text>
                                         </View>
                                     </TouchableNativeFeedback>
